@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -12,6 +13,10 @@ namespace AsmxTestHarness
         {
             // Get application settings from App.config
             var settings = new AppSettings();
+
+            // Setup tracing
+            Tracer.SourceName = "AsmxTestHarness";
+            Tracer.TraceFilePath = GetTraceFilePath(settings);
 
             // Ignore warnings related to expired self-signed SSL certificate
             ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
@@ -83,6 +88,16 @@ namespace AsmxTestHarness
             
             // Return the result to the caller
             return result;
+        }
+
+        private static string GetTraceFilePath(AppSettings settings)
+        {
+            var path = settings.TestFolder;
+
+            if (!Directory.Exists(path))
+                throw new DirectoryNotFoundException($"Directory Not Found: {path}");
+
+            return Path.Combine(path, $"Trace {DateTime.Today:yyyy-MM-dd}.txt");
         }
     }
 }

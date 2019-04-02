@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 
@@ -46,6 +47,12 @@ namespace AsmxTestHarness
         /// </summary>
         public void Execute(Func<string, string, AppSettings, string> invoke)
         {
+            var directory = new DirectoryInfo(TestFolder);
+
+            var watch = Stopwatch.StartNew();
+
+            Tracer.Info($"Starting {MethodName} {directory.Name} ...");
+
             try
             {
                 // If there is an existing Error file and/or an existing Actual Output file
@@ -63,7 +70,14 @@ namespace AsmxTestHarness
             catch (WebException ex)
             {
                 File.WriteAllText(ErrorPath, ex.Message);
+                Tracer.Info($"    *** ERROR. {ex.Message}");
             }
+
+            watch.Stop();
+
+            var elapsed = $"    ... Completed. Elapsed Time = {watch.ElapsedMilliseconds:n0} ms";
+
+            Tracer.Info(elapsed);
         }
     }
 }
