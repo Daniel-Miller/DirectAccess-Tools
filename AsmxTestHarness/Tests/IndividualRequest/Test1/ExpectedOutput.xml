@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<itada>
+  <query>
+    <id>
+    </id>
+    <firstname>Chris</firstname>
+    <lastname>Dimakos</lastname>
+    <dob>1944-03-24</dob>
+    <program>
+    </program>
+    <email>
+    </email>
+  </query>
+  <response>
+    <individuals count="1">
+      <individual>
+        <individualid>043340</individualid>
+        <firstname>Chris</firstname>
+        <middlename>H.</middlename>
+        <lastname>Dimakos</lastname>
+        <dob>1944-03-24</dob>
+        <registrations count="1">
+          <registration trade="Ironworker (Generalist)" program="Ironworker (Generalist) Challenge" />
+        </registrations>
+        <addressline1>5275 Shelby Crt</addressline1>
+        <addressline2 />
+        <addresscity>Burnaby</addresscity>
+        <addressprovince>BC</addressprovince>
+        <postalzipcode>V5G1V3</postalzipcode>
+        <emailaddress />
+        <aboriginal indicator="No" identity="None" />
+        <gender>Male</gender>
+        <isactive>Y</isactive>
+        <isdeceased>N</isdeceased>
+        <ismerged>N</ismerged>
+      </individual>
+    </individuals>
+  </response>
+</itada>
