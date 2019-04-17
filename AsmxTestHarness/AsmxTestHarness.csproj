@@ -77,7 +77,8 @@
     <Content Include="Tests\Xml\IndividualRequest\Test1\ActualOutput.xml" />
     <Content Include="Tests\Xml\IndividualRequest\Test1\ExpectedOutput.xml" />
     <Content Include="Tests\Xml\IndividualRequest\Test1\Input.xml" />
-    <Content Include="Tests\Xml\RequestStatus\Test1\Error.txt" />
+    <Content Include="Tests\Xml\RequestStatus\Test1\ExpectedOutput.xml" />
+    <Content Include="Tests\Xml\RequestStatus\Test1\ActualOutput.xml" />
     <Content Include="Tests\Xml\RequestStatus\Test1\Input.xml" />
     <Content Include="Tests\Xml\SubmitExamData\Test1\ActualOutput.xml" />
     <Content Include="Tests\Xml\SubmitExamData\Test1\ExpectedOutput.xml" />
