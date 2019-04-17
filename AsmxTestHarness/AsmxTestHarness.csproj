@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -44,25 +47,41 @@
     <Compile Include="AppSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test.cs" />
+    <Compile Include="Tests\Json\JsonTest.cs" />
+    <Compile Include="Tests\Xml\XmlTest.cs" />
     <Compile Include="Tracer.cs" />
+    <Compile Include="Tests\Json\JsonTestRunner.cs" />
+    <Compile Include="Tests\Xml\XmlTestRunner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Tests\Json\ExamIdForClassId\Test1\ActualOutput.json" />
+    <None Include="Tests\Json\TrainingProviders\Test1\ActualOutput.json" />
+    <None Include="Tests\Json\UserContext\Test1\ActualOutput.json" />
+    <None Include="Tests\Json\VerifyActiveIndividual\Test1\ActualOutput.json" />
+    <None Include="Tests\Json\VerifyCorrespondingRegistration\Test1\ActualOutput.json" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Tests\ExamScheduleRequest\Test1\ActualOutput.xml" />
-    <Content Include="Tests\ExamScheduleRequest\Test1\Input.xml" />
-    <Content Include="Tests\IndividualRequest\Test1\ActualOutput.xml" />
-    <Content Include="Tests\IndividualRequest\Test1\ExpectedOutput.xml" />
-    <Content Include="Tests\IndividualRequest\Test1\Input.xml" />
-    <Content Include="Tests\RequestStatus\Test1\Input.xml" />
-    <Content Include="Tests\SubmitExamData\Test1\ActualOutput.xml" />
-    <Content Include="Tests\SubmitExamData\Test1\ExpectedOutput.xml" />
-    <Content Include="Tests\SubmitExamData\Test1\Input.xml" />
+    <Content Include="Tests\Json\ExamIdForClassId\Test1\Input.txt" />
+    <Content Include="Tests\Json\TrainingProviders\Test1\Input.txt" />
+    <Content Include="Tests\Json\UserContext\Test1\Input.txt" />
+    <Content Include="Tests\Json\VerifyActiveIndividual\Test1\Input.txt" />
+    <Content Include="Tests\Json\VerifyCorrespondingRegistration\Test1\Input.txt" />
+    <Content Include="Tests\Trace 2019-04-17.txt" />
+    <Content Include="Tests\Xml\ExamScheduleRequest\Test1\ActualOutput.xml" />
+    <Content Include="Tests\Xml\ExamScheduleRequest\Test1\Input.xml" />
+    <Content Include="Tests\Xml\IndividualRequest\Test1\ActualOutput.xml" />
+    <Content Include="Tests\Xml\IndividualRequest\Test1\ExpectedOutput.xml" />
+    <Content Include="Tests\Xml\IndividualRequest\Test1\Input.xml" />
+    <Content Include="Tests\Xml\RequestStatus\Test1\Error.txt" />
+    <Content Include="Tests\Xml\RequestStatus\Test1\Input.xml" />
+    <Content Include="Tests\Xml\SubmitExamData\Test1\ActualOutput.xml" />
+    <Content Include="Tests\Xml\SubmitExamData\Test1\ExpectedOutput.xml" />
+    <Content Include="Tests\Xml\SubmitExamData\Test1\Input.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

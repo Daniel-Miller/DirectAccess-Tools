@@ -1,0 +1,75 @@
+[
+  {
+    "ID": 100011,
+    "Name": "The Finishing Trades Institute of BC",
+    "Staff": [
+      {
+        "ID": 550121,
+        "Name": "Brent Bertholm",
+        "Email": "63BrentBertholm39@rqjor.nkj",
+        "Primary": false
+      },
+      {
+        "ID": 539796,
+        "Name": "Corinne Elgert",
+        "Email": "40CorinneElgert40@kicfo.wjj",
+        "Primary": true
+      }
+    ],
+    "Trades": [
+      16,
+      35,
+      60,
+      188
+    ],
+    "PhoneNumber": "6045803112",
+    "FaxNumber": "",
+    "EmailAddress": "9TheFinishingTradesInstituteofBC@random.com",
+    "Address": {
+      "Line1": "12277 Industrial Rd",
+      "Line2": "",
+      "Line3": "",
+      "Line4": "what field is this?",
+      "City": "Surrey",
+      "Province": "BC",
+      "PostalCode": "V3V3S1",
+      "Country": "Canada"
+    },
+    "Locations": [
+      {
+        "Address": {
+          "Line1": "12277 Industrial Rd",
+          "Line2": "",
+          "Line3": "",
+          "Line4": "",
+          "City": "Surrey",
+          "Province": "BC",
+          "PostalCode": "V3V 3S1",
+          "Country": "Canada"
+        },
+        "LocationId": 38674,
+        "LocationCode": "Main",
+        "LocationDescription": "",
+        "PhoneNumber": "6045803112",
+        "ContactName": ""
+      },
+      {
+        "Address": {
+          "Line1": "",
+          "Line2": "",
+          "Line3": "",
+          "Line4": "",
+          "City": "",
+          "Province": "",
+          "PostalCode": "",
+          "Country": ""
+        },
+        "LocationId": 18299919,
+        "LocationCode": "Agassiz",
+        "LocationDescription": "",
+        "PhoneNumber": "",
+        "ContactName": ""
+      }
+    ]
+  }
+]

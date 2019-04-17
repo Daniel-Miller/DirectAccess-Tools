@@ -3,16 +3,19 @@ using System.Diagnostics;
 using System.IO;
 using System.Net;
 
-namespace AsmxTestHarness
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
+namespace AsmxTestHarness.Tests.Json
 {
     /// <summary>
     /// This class represents a specific test case for a specific web services method.
     /// </summary>
-    public class Test
+    public class JsonTest
     {
         private readonly AppSettings _settings;
 
-        public Test(string methodName, string inputPath, AppSettings settings)
+        public JsonTest(string methodName, string inputPath, AppSettings settings)
         {
             MethodName = methodName;
             InputPath = inputPath;
@@ -37,7 +40,7 @@ namespace AsmxTestHarness
             }
         }
 
-        public string OutputPath => Path.Combine(TestFolder, "ActualOutput.xml");
+        public string OutputPath => Path.Combine(TestFolder, "ActualOutput.json");
 
         public string ErrorPath => Path.Combine(TestFolder, "Error.txt");
 
@@ -65,7 +68,14 @@ namespace AsmxTestHarness
                 var result = invoke(MethodName, MethodData, _settings);
 
                 // Write the actual output to a file so we can compare to the expected output
-                File.WriteAllText(OutputPath, result);
+                
+                // *** We can't deserialize, parse, or format the output because it might not be valid JSON.
+                var parsedJson = JToken.Parse(result);
+                var beautified = parsedJson.ToString(Formatting.Indented);
+                File.WriteAllText(OutputPath, beautified);
+
+                // *** So we can only dump the raw output in the meantime
+                // File.WriteAllText(OutputPath, result);
             }
             catch (WebException ex)
             {

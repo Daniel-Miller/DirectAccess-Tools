@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 100011,
+    "Name": "The Finishing Trades Institute of BC",
+    "Staff": [
+      {
+        "Id": 539796,
+        "Name": "Corinne Elgert",
+        "Email": "40CorinneElgert40@kicfo.wjj",
+        "Primary": true
+      },
+      {
+        "Id": 550121,
+        "Name": "Brent Bertholm",
+        "Email": "63BrentBertholm39@rqjor.nkj",
+        "Primary": false
+      }
+    ],
+    "Trades": [
+      16,
+      35,
+      60,
+      188
+    ]
+  }
+]
