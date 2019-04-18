@@ -56,11 +56,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="Tests\Json\ExamIdForClassId\Test1\ActualOutput.json" />
-    <None Include="Tests\Json\TrainingProviders\Test1\ActualOutput.json" />
-    <None Include="Tests\Json\UserContext\Test1\ActualOutput.json" />
-    <None Include="Tests\Json\VerifyActiveIndividual\Test1\ActualOutput.json" />
-    <None Include="Tests\Json\VerifyCorrespondingRegistration\Test1\ActualOutput.json" />
+    <None Include="Tests\Json\ExamIdForClassId\Test1\ExpectedOutput.json" />
+    <None Include="Tests\Json\TrainingProviders\Test1\ExpectedOutput.json" />
+    <None Include="Tests\Json\UserContext\Test1\ExpectedOutput.json" />
+    <None Include="Tests\Json\VerifyActiveIndividual\Test1\ExpectedOutput.json" />
+    <None Include="Tests\Json\VerifyCorrespondingRegistration\Test1\ExpectedOutput.json" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -71,8 +71,7 @@
     <Content Include="Tests\Json\UserContext\Test1\Input.txt" />
     <Content Include="Tests\Json\VerifyActiveIndividual\Test1\Input.txt" />
     <Content Include="Tests\Json\VerifyCorrespondingRegistration\Test1\Input.txt" />
-    <Content Include="Tests\Trace 2019-04-17.txt" />
-    <Content Include="Tests\Xml\ExamScheduleRequest\Test1\ActualOutput.xml" />
+    <Content Include="Tests\Xml\ExamScheduleRequest\Test1\ExpectedOutput.xml" />
     <Content Include="Tests\Xml\ExamScheduleRequest\Test1\Input.xml" />
     <Content Include="Tests\Xml\IndividualRequest\Test1\ActualOutput.xml" />
     <Content Include="Tests\Xml\IndividualRequest\Test1\ExpectedOutput.xml" />
